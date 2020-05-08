@@ -37,24 +37,33 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <h1>Tic-Tac-Toe!</h1>
+  <h4 id="turn">It is O's turn!</h4>
   <div class="container">
+
     <div class="row">
 
       <div class="grid-container">
-        <div id="1" class="grid-item">1</div>
-        <div id="2" class="grid-item">2</div>
-        <div id="3" class="grid-item">3</div>
-        <div id="4" class="grid-item">4</div>
-        <div id="5" class="grid-item">5</div>
-        <div id="6"  class="grid-item">6</div>
-        <div class="grid-item">7</div>
-        <div class="grid-item">8</div>
-        <div class="grid-item">9</div>
+        <div id="div1" class="grid-item"></div>
+        <div id="div2" class="grid-item"></div>
+        <div id="div3" class="grid-item"></div>
+        <div id="div4" class="grid-item"></div>
+        <div id="div5" class="grid-item"></div>
+        <div id="div6" class="grid-item"></div>
+        <div id="div7" class="grid-item"></div>
+        <div id="div8" class="grid-item"></div>
+        <div id="div9" class="grid-item"></div>
       </div>
 
     </div>
+    <div id="modal-id" class="modal row">
+      <div class="six columns offset-by-three">
+        <h1 id="who-won"></h1>
+        <a class="button button-primary" href="/">Play Again!</a>
+      </div>
+    </div>
     <!-- container div -->
   </div>
+
 
 
 <!-- End Document
