@@ -33,11 +33,23 @@ h1 {
   text-align: center;
 
 }
+.grid::before {
+  content: '';
+  width: 0;
+  padding-bottom: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+.grid > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
 @media all and (min-width: 700px) {
   .grid-container {
     display: grid;
-    grid-template-columns: 150px 150px 150px;;
-    margin: 0 40vh 20vh;
+    grid-template-columns: repeat(3, minmax(8rem, 1fr));
+    grid-auto-rows: 1fr;
+    margin: 0 auto 20vh;
     padding: 10px;
     width: 50%;
   }
@@ -47,19 +59,19 @@ h1 {
     padding: 20px;
     font-size: 65px;
     text-align: center;
-    min-width: 150px;
-    min-height: 150px;
-    /* max-width: 200px;
-    max-height: 200px; */
+    min-width: 170px;
+    min-height: 170px;
+    /* max-width: 175px;
+    max-height: 175px; */
   }
 
 }
 @media all and (max-width: 699px) and (min-width: 416px) {
   .grid-container {
     display: grid;
-    grid-template-columns: 125px 125px 125px;
+    grid-template-columns: auto auto auto;
     /* background-color: #2196F3; */
-    margin: 0 10vh 20vh;
+    margin: 0 auto 20vh;
     padding: 10px;
     width: 50%;
   }
@@ -78,8 +90,8 @@ h1 {
 @media all and (max-width: 415px) {
   .grid-container {
     display: grid;
-    grid-template-columns: 110px 110px 110px;
-    margin: 0;
+    grid-template-columns: auto auto auto;
+    margin: 0 auto;
     /* background-color: #2196F3; */
 
     width: 40%;
