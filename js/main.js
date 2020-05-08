@@ -71,7 +71,7 @@ function checkWin (tieCounter) {
   }
   if (a[2] != null) {
     if (a[2] === b[1] && a[2] === c[0]) {
-      forTheWin(a[0]);
+      forTheWin(a[2 ]);
     }
   }
   const reducer = (acc, cv) => acc + cv;
@@ -110,6 +110,7 @@ function renderTurn(cell, tieCounter) {
   checkWin(tieCounter);
 }
 function forTheWin(winner) {
+  console.log(winner);
   winDiv = document.querySelector('#who-won');
   if (winner > 0) {
     winDiv.innerHTML = 'X wins the game!!!'
